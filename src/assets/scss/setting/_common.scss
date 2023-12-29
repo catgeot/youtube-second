@@ -2,7 +2,7 @@ body {
     background-color: var(--black);
     color: var(--white);
 }
-
+//섹션공통요소
 section {
     padding: 40px;
 
@@ -15,7 +15,16 @@ section {
         margin-bottom: 1rem;
     }
 }
-
+//섹션 로딩소스
+.isLoading {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.isLoaded {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+//플레이 아이콘
 .play_icon {
     a {
         position: relative;
