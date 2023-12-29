@@ -1,0 +1,19 @@
+.developer_inner {
+    display: flex;
+
+    .developer {
+
+        .developer_img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .developer_info {
+            width: 150px;
+            text-align: center;         
+        }
+    }
+}

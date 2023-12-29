@@ -1,0 +1,87 @@
+.today_inner {
+    display: flex;
+    margin-bottom: 3.125rem;
+    background-color: var(--black200);
+}
+
+.today_thumb {
+    width: 40%;
+    padding: 2rem;
+
+}
+
+.today_text {
+    width: 60%;
+
+    .today {
+        background-color: var(--red);
+        padding: 2px 50px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .title {
+        font-style: 2rem;
+        margin-bottom: 1rem;
+        @include line(1);
+    }
+    .desc {
+        margin-bottom: 1rem;
+        color: var(--white200);
+
+        @include line(4);
+    }
+    .info {
+        .author {
+            font-style: 1rem;
+            margin-right: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        .date {
+            font-size: 0.8rem;
+            color: var(--white200);
+        }
+    }       
+}
+
+@media (max-width: 1700px) {
+    .today_inner {
+        .today_thumb {
+            width: 500px;
+        }
+        .today_text {
+            width: calc(100% - 500px);
+    
+            .desc {
+                @include line(2);
+            }
+        }
+    }    
+}
+
+@media (max-width: 1200px) {
+    .today_inner {
+        flex-direction: column;
+        .today_thumb {
+            width: 100%;
+        }
+        .today_text {
+            width: 100%;
+    
+            .desc {
+                display: none;
+            }
+        }
+    }    
+}
+
+@media (max-width: 800px) {
+    #todayPage,
+    #today {
+        margin-top: 80px;
+    }
+}

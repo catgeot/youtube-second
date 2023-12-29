@@ -1,4 +1,5 @@
 .search_inner {
+    position: relative;
     width: 100%;
     height: 80px;
     padding: 17px 40px;
@@ -8,7 +9,10 @@
         width: 24px;
         height: 24px;
         background-image: url(../../img/icon/search.svg);
-
+        position: absolute;
+        left: 53px;
+        top: 28px;
+        background-size: cover;
     }
 
     input {
@@ -19,6 +23,28 @@
         border-radius: 40px;
         font-size: 16px;
         color: var(--white);
+
+    }
+}
+
+@media (max-width: 800px) {
+    .search_inner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--blackAlpha300);
+        padding: 17px 20px 70px 200px;
+        backdrop-filter: blur(10px);
+
+        label {
+            left: 215px;
+        }
+
+        input {
+            padding: 14px 14px 14px 45px;
+        }
 
     }
 }
