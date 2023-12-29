@@ -1,7 +1,15 @@
 .developer_inner {
     display: flex;
+    flex-wrap: wrap;
+
+    &.overflow {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
 
     .developer {
+        margin-right: 20px;
 
         .developer_img {
             width: 150px;
@@ -13,7 +21,30 @@
 
         .developer_info {
             width: 150px;
-            text-align: center;         
+            text-align: center;  
+            @include line-one;    
+            padding-bottom: 40px;
         }
-    }
+    }    
+}
+
+@media (max-width: 1200px) {
+    .developer_inner {
+        justify-content: center;
+
+        .developer {
+            margin-right: 0;
+
+            .developer_img {
+                width: 130px;
+                height: 130px;
+                margin: 10px auto;
+            }            
+        }
+    }    
+}
+@media (max-width: 800px) {
+    .developer_inner {
+        margin-top: 70px;        
+    }    
 }
